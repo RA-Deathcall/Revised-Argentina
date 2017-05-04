@@ -1,0 +1,268 @@
+﻿capital = 278
+
+oob = "ARG_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	CAS1 = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	transport = 1
+}
+set_country_flag = monroe_doctrine
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "ARG_1939"
+	set_technology = {
+		early_bomber = 1
+		naval_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antiair = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		basic_destroyer = 1
+		basic_light_cruiser = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_plant = 1
+		improved_oil_plant = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_convoys = 120
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 30
+		}
+
+		fascism = {
+			popularity = 15
+		}
+		
+		communism = {
+			popularity = 15
+		}
+		
+		neutrality = { 
+			popularity = 40
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1931.11.8"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+add_ideas = {
+	ARG_political_turmoil
+	ARG_saavedra_lamas_treaty
+	ARG_carlos_saavedra_lamas
+	ARG_roca_runciman_treaty
+}
+
+create_country_leader = {
+	name = "Agustín Pedro Justo"
+	desc = "POLITICS_AGUSTIN_PEDRO_JUSTO_DESC"
+	picture = "ra_political_leaders/ARG_leader_neutrality_agustin_justo.dds"
+	expire = "1943.1.11"
+	ideology = moderatism
+	traits = {
+		civil_engineer
+		misguided_patriot
+	}
+}
+
+### REVARG EDIT ###
+set_national_unity = 0.53
+set_research_slots = 3
+### REVARG EDIT ###
+
+1939.1.1 = {
+	set_politics = {
+
+		parties = {
+		democratic = { 
+			popularity = 5
+		}
+
+		fascism = {
+			popularity = 5
+		}
+		
+		communism = {
+			popularity = 12
+		}
+		
+		neutrality = { 
+			popularity = 78
+		}
+	}
+	
+	ruling_party = neutrality
+		last_election = "1937.9.5"
+		election_frequency = 108
+		elections_allowed = yes
+	}
+
+	create_country_leader = {
+		name = "Roberto María Ortiz"
+		desc = "POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
+		picture = "ra_political_leaders/ARG_leader_neutrality_roberto_ortiz.dds"
+		expire = "1942.07.15"
+		ideology = moderatism
+		traits = {
+			#
+		}
+	}
+}
+
+
+create_country_leader = {
+	name = "Nimio de Anquín"
+	desc = "POLITICS_NIMO_DE_ANQUIN_DESC"
+	picture = "ra_political_leaders/ARG_leader_fascism_nimio_anquin.dds"
+	expire = "1979.05.16"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Marcelo T. de Alvear"
+	desc = "POLITICS_MARCELO_ALVEAR_DESC"
+	picture = "ra_political_leaders/ARG_leader_democratic_marcelo_alvear.dds"
+	expire = "1942.04.23"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fanny Jabcovsky"
+	desc = "POLITICS_FANNY_JABCOVSKY_DESC"
+	picture = "ra_political_leaders/ARG_leader_communism_fanny_jacobsky.dds"
+	expire = "2011.11.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Arturo Rawson"
+	portrait_path = "gfx/leaders/ARG/ra_army_leaders/ARG_army_leader_arturo_rawson2.dds"
+	traits = { cavalry_specialist veteran_of_the_great_chaco_campaign }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Juan Pistarini"
+	portrait_path = "gfx/leaders/ARG/ra_army_leaders/ARG_army_leader_juan_pistarini2.dds"
+	traits = { go_doer army_engineer }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Carlos Von der Becke"
+	portrait_path = "gfx/leaders/ARG/ra_army_leaders/ARG_army_leader_carlos_von_der_becke.dds"
+	traits = { standard_bearer order_of_merit master_planner kriegsakademy_student }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Juan Domingo Peron"
+	portrait_path = "gfx/leaders/ARG/ra_army_leaders/ARG_army_leader_juan_domingo_peron.dds"
+	traits = { urban_assault_specialist national_fencing_champion military_historian }
+	skill = 3
+}
+
+######### NAVY COMMANDERS #########
+
+create_navy_leader = {
+	name = "Alberto Teisaire"
+	portrait_path = "gfx/leaders/ARG/ra_navy_leaders/ARG_navy_leader_alberto_teisaire.dds"
+	traits = { blockade_runner }
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Agustin Poch"
+	portrait_path = "gfx/leaders/ARG/ra_navy_leaders/ARG_navy_leader_agustin_poch.dds"
+	traits = { blockade_runner }
+	skill = 3
+}
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Cervantes Class"
+	type = destroyer_1
+	upgrades = {
+		ship_torpedo_upgrade = 1
+		destroyer_engine_upgrade = 1
+		ship_ASW_upgrade = 1
+		ship_anti_air_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Veinticinco de Mayo Class"
+	type = heavy_cruiser_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		ship_engine_upgrade = 1
+		ship_armor_upgrade = 1
+		ship_gun_upgrade = 1
+	}
+}

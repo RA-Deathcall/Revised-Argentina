@@ -1,0 +1,13 @@
+spriteTypes = {
+
+	#### ARGENTINA EVENTS ####
+	
+	spriteType = {
+		name = "GFX_news_event_arg_lamas_nobel_price"
+		texturefile = "gfx/event_pictures/news_event_arg_lamas_nobel_price.dds"
+	}
+	
+}
+
+
+

@@ -1,0 +1,2075 @@
+focus_tree = {
+	id = RA_Argentina_FT
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARG
+		}
+	}
+	default = no
+	
+### Electoral Politics Branch - START
+
+	focus = {						### Electoral Politics
+		id = ra_arg_epb
+		text = ra_arg_epb
+		icon = GFX_goal_unknown
+		cost = 5.00
+		x = 2
+		y = 0
+	
+	available_if_capitulated = yes	
+
+	completion_reward = {
+		add_political_power = 35
+		}
+	}
+	focus = {						### Patriotic Fraud
+		id = ra_arg_epb_pf
+		text = ra_arg_epb_pf
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_epb
+		}
+		mutually_exclusive = {
+			focus = ra_arg_epb_t
+		}
+		x = 1
+		y = 1
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_ideas = ARG_Patriotic_Fraud
+		}
+	}
+	focus = {
+		id = ra_arg_epb_t			### Transparency
+		text = ra_arg_epb_t
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_epb
+		}
+		mutually_exclusive = {
+			focus = ra_arg_epb_pf
+		}
+		x = 3
+		y = 1
+		
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_ideas = ARG_Transparency	
+		}
+	}
+	focus = {						### Outlaw the Opposition
+		id = ra_arg_epb_oto
+		text = ra_arg_epb_oto
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_epb_pf
+		}
+		x = 1
+		y = 2
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_timed_idea = { idea = ARG_Civil_Unrest days = 365 }
+		add_popularity = { ideology = neutrality popularity = 0.15 }
+		}
+	}
+	focus = {
+		id = ra_arg_epb_rpp			### Release Political Prisoners
+		text = ra_arg_epb_rpp
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_epb_t
+		}
+		x = 3
+		y = 2
+		
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_timed_idea = { idea = ARG_Appeased_Population days = 365 }
+		add_popularity = { ideology = democratic popularity = 0.15 }
+		}
+	}
+	focus = {
+		id = ra_arg_epb_cp			### Centralize Power
+		text = ra_arg_epb_cp
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_epb_oto
+		}
+		x = 1
+		y = 3
+		
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_ideas = ARG_Centralized_Government
+		}
+	}
+
+	focus = {
+		id = ra_arg_epb_cg			### Coalition Government
+		text = ra_arg_epb_cg
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_epb_rpp
+		}
+		x = 3
+		y = 3
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_ideas = ARG_Coalition_Government
+		}
+	}
+	focus = {
+		id = ra_arg_epb_atn			### Address the Nation
+		text = ra_arg_epb_atn
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_epb_cp
+			focus = ra_arg_epb_cg
+		}
+		x = 2
+		y = 4
+		
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_political_power = 100
+		remove_ideas = ARG_political_turmoil
+		}
+	}
+
+
+### Electoral Politics Branch - END
+
+### Class Struggle Branch - START
+
+	focus = {						### Class Struggle
+		id = ra_arg_csb
+		text = ra_arg_csb
+		icon = GFX_goal_unknown
+		cost = 5.00
+		x = 7
+		y = 0
+		
+	available_if_capitulated = yes
+	
+	completion_reward = {
+		add_timed_idea = { idea = ARG_Brief_Respite days = 150 }
+		}
+	}
+	focus = {
+		id = ra_arg_csb_mwtc		### Meet with the Chairmen
+		text = ra_arg_csb_mwtc
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_csb
+		}
+		x = 6
+		y = 1
+
+	available_if_capitulated = yes
+
+	available = {
+		if = {
+			has_political_power > 35
+			}
+		}
+	
+	completion_reward = {
+		add_political_power = -35
+		}
+	}
+	focus = {
+		id = ra_arg_csb_mwtu		### Meet with the Unions
+		text = ra_arg_csb_mwtu
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_csb
+		}
+		x = 8
+		y = 1
+
+	available_if_capitulated = yes
+
+	available = {
+		if = {
+			has_political_power > 35
+			}
+		}
+	
+	completion_reward = {
+		add_political_power = -35
+		}
+	}
+	focus = {
+		id = ra_arg_csb_clr			### Corporate Law Reforms
+		text = ra_arg_csb_clr
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_csb_mwtc
+		}
+		x = 6
+		y = 2
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_timed_idea = { idea = ARG_Corporate_Law_Reforms days = 120 }
+		}	
+	}
+	focus = {
+		id = ra_arg_csb_llr			### Labor Law Reforms
+		text = ra_arg_csb_llr
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_csb_mwtu
+		}
+		x = 8
+		y = 2
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_timed_idea = { idea = ARG_Labor_Law_Reforms days = 120 }
+		}
+	}
+	focus = {
+		id = ra_arg_csb_slp			### Streamlined Procedures
+		text = ra_arg_csb_slp
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_csb_clr
+		}
+		x = 6
+		y = 3
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_timed_idea = { idea = ARG_Blooming_Industry days = 180 }
+		}
+	}
+	focus = {
+		id = ra_arg_csb_c			### Cooperativism
+		text = ra_arg_csb_c
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_csb_llr
+		}
+		x = 8
+		y = 3
+
+	available_if_capitulated = yes
+	
+	completion_reward = {
+		add_timed_idea = { idea = ARG_ICA_Support days = 180 }
+		}
+	}
+	focus = {
+		id = ra_arg_csb_cs			### Corporate Supremacy
+		text = ra_arg_csb_cs
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_csb_slp
+		}
+		mutually_exclusive = {
+			focus = ra_arg_csb_wr
+		}
+		x = 6
+		y = 4
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_ideas = ARG_Corporate_Supremacy
+		}
+	}
+	focus = {
+		id = ra_arg_csb_wr			### Worker Rights
+		text = ra_arg_csb_wr
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_csb_c
+		}
+		mutually_exclusive = {
+			focus = ra_arg_csb_cs
+		}
+		x = 8
+		y = 4
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_ideas = ARG_Worker_Rights
+		}
+	}
+	
+### Class Struggle Branch - END
+
+### Migration Policies Branch - START
+
+	focus = {
+		id = ra_arg_mpb					### Migration Policies
+		text = ra_arg_mpb
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 15
+		y = 0
+
+	available_if_capitulated = yes
+	
+	completion_reward = {
+		complete_national_focus = ra_arg_mpb_im
+		complete_national_focus = ra_arg_mpb_cbm
+		}
+	}
+	focus = {
+		id = ra_arg_mpb_im				### Internal Migration
+		text = ra_arg_mpb_im
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mpb
+		}
+		x = 12
+		y = 1
+	}
+	focus = {
+		id = ra_arg_mpb_eum				### Encourage Urban Migration
+		text = ra_arg_mpb_eum
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ra_arg_mpb_im
+		}
+		mutually_exclusive = {
+			focus = ra_arg_mpb_ptc
+		}
+		x = 11
+		y = 2
+		
+	available_if_capitulated = yes
+
+	completion_reward = {
+		278 = { add_extra_state_shared_building_slots = 2 }
+		510 = { add_extra_state_shared_building_slots = 2 }
+		}
+	}
+	focus = {
+		id = ra_arg_mpb_ptc				### Populate the Countryside
+		text = ra_arg_mpb_ptc
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = ra_arg_mpb_im
+		}
+		mutually_exclusive = {
+			focus = ra_arg_mpb_eum
+		}
+		x = 13
+		y = 2
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		509 = { add_extra_state_shared_building_slots = 1 }
+		508 = { add_extra_state_shared_building_slots = 1 }
+		511 = { add_extra_state_shared_building_slots = 1 }
+		512 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+	focus = {
+		id = ra_arg_mpb_cbm				### Cross Border Migration
+		text = ra_arg_mpb_cbm
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mpb
+		}
+		x = 18
+		y = 1
+	}
+	focus = {
+		id = ra_arg_mpb_u				### Unrestricted
+		text = ra_arg_mpb_u
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = ra_arg_mpb_cbm
+		}
+		mutually_exclusive = {
+			focus = ra_arg_mpb_r
+		}
+		x = 16
+		y = 2
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_ideas = ARG_Open_Borders
+		}
+	}
+	focus = {
+		id = ra_arg_mpb_rm				### Regional Migration
+		text = ra_arg_mpb_rm
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_mpb_u
+		}
+		x = 15
+		y = 3
+
+	available_if_capitulated = yes
+
+		completion_reward = {
+			every_neighbor_country = {
+				add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies }
+			}
+		}
+	}
+	focus = {
+		id = ra_arg_mpb_icm				### Intercontinental Migration
+		text = ra_arg_mpb_icm
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_mpb_u
+		}
+		x = 17
+		y = 3
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }
+			SPA = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }
+			SPR = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }
+			GER = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }
+			FRA = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }
+			POL = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }
+			SOV = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }
+			TUR = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }	
+			ENG = {	add_opinion_modifier = { target = ARG modifier = ARG_Friendly_Migration_Policies } }
+		}
+	}
+	focus = {
+		id = ra_arg_mpb_shi				### Safe Haven Initiative
+		text = ra_arg_mpb_shi
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = ra_arg_mpb_rm
+		}
+		prerequisite = {
+			focus = ra_arg_mpb_icm
+		}
+		x = 16
+		y = 4
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		remove_ideas = ARG_Open_Borders
+		add_ideas = ARG_Safe_Heaven_Initiative	
+		}
+
+	}
+	focus = {
+		id = ra_arg_mpb_r				### Restricted
+		text = ra_arg_mpb_r
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_mpb_cbm
+		}
+		mutually_exclusive = {
+			focus = ra_arg_mpb_u
+		}
+		x = 20
+		y = 2
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_national_unity = 0.03
+		}		
+	}
+	focus = {
+		id = ra_arg_mpb_cb				### Closed Borders
+		text = ra_arg_mpb_cb
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = ra_arg_mpb_r
+		}
+		x = 20
+		y = 3
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_ideas = ARG_Closed_Borders_Philosphy
+		}
+	}
+	focus = {
+		id = ra_arg_mpb_d11				### Directive 11
+		text = ra_arg_mpb_d11
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mpb_cb
+		}
+		x = 20
+		y = 4
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_threat = 5
+			GER = {	add_opinion_modifier = { target = ARG modifier = ARG_Great_Minds_Think_Alike } }
+			remove_ideas = ARG_Closed_Borders_Philosphy
+			add_ideas = ARG_Directive_11		
+		}
+	}
+
+### Migration Policies Branch - END
+
+### Education Branch - START
+
+	focus = {
+		id = ra_arg_eb					### Education
+		text = ra_arg_eb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		x = 25
+		y = 0
+
+	}
+	focus = {
+		id = ra_arg_eb_pe				### Public Education
+		text = ra_arg_eb_pe
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb
+		}
+		x = 23
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_eb_ep				### Education Policies
+		text = ra_arg_eb_ep
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb
+		}
+		x = 25
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_eb_mi				### Mixed Institutions
+		text = ra_arg_eb_mi
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb
+		}
+		x = 27
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_eb_cd				### Cultural Diversity
+		text = ra_arg_eb_cd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb_ep
+		}
+		mutually_exclusive = {
+			focus = ra_arg_eb_ch
+		}
+		x = 24
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_eb_ch				### Cultural Homogeniazation
+		text = ra_arg_eb_ch
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb_ep
+		}
+		mutually_exclusive = {
+			focus = ra_arg_eb_cd
+		}
+		x = 26
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_eb_sp				### Scholarship Program
+		text = ra_arg_eb_sp
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb_pe
+		}
+		x = 23
+		y = 3
+
+	}
+
+
+	focus = {
+		id = ra_arg_eb_nes				### New Educational Scheme
+		text = ra_arg_eb_nes
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb_ep
+		}
+		x = 25
+		y = 3
+
+	}
+
+	focus = {
+		id = ra_arg_eb_pried			### Private Education
+		text = ra_arg_eb_pried
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb_mi
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_eb_cc				### Controlled Content
+		text = ra_arg_eb_cc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb_nes
+		}
+		mutually_exclusive = {
+			focus = ra_arg_eb_sc
+		}
+		x = 24
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_eb_sc				### Standarized Content
+		text = ra_arg_eb_sc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_eb_nes
+		}
+		mutually_exclusive = {
+			focus = ra_arg_eb_cc
+		}
+		x = 26
+		y = 4
+
+	}
+
+### Education Branch - END
+
+### Economic Policies Branch - START
+
+	focus = {
+		id = ra_arg_ecpb				### Economic Policies
+		text = ra_arg_ecpb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		x = 39
+		y = 0
+
+	}
+	focus = {
+		id = ra_arg_ecpb_dtp			### Denounce Runciman Pact
+		text = ra_arg_ecpb_dtp
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb
+		}
+		x = 31
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_ecpb_le				### Limited Exports
+		text = ra_arg_ecpb_le
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_dtp
+		}
+		mutually_exclusive = {
+			focus = ra_arg_ecpb_temp
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_ecpb_temp			### The Eden-Malbran Pact
+		text = ra_arg_ecpb_temp
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_dtp
+		}
+		mutually_exclusive = {
+			focus = ra_arg_ecpb_le
+		}
+		x = 32
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_ecpb_snm			### Seek New Markets
+		text = ra_arg_ecpb_snm
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_le
+			focus = ra_arg_ecpb_temp
+		}
+		x = 31
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_ecpb_pdm			### Prioritize Domestic Market
+		text = ra_arg_ecpb_pdm
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_snm
+			focus = ra_arg_ecpb_le
+		}
+		mutually_exclusive = {
+			focus = ra_arg_ecpb_gotw
+		}
+		x = 30
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_ecpb_gotw			### Granary of the World
+		text = ra_arg_ecpb_gotw
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_snm
+		}
+		mutually_exclusive = {
+			focus = ra_arg_ecpb_pdm
+		}
+		x = 32
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_ecpb_roi			### Revitalize our Industry
+		text = ra_arg_ecpb_roi
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb
+		}
+		x = 39
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_ecpb_sfc			### State Funded Companies
+		text = ra_arg_ecpb_sfc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_roi
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_ecpb_dcs			### Develop the Civilian Sector
+		text = ra_arg_ecpb_dcs
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_sfc
+		}
+		x = 34
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_ecpb_dtms			### Develop the Military Sector
+		text = ra_arg_ecpb_dtms
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_sfc
+		}
+		x = 36
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_ecpb_YPF			### Yacimientos Petroliferos Federales
+		text = ra_arg_ecpb_YPF
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_dcs
+		}
+		x = 34
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_ecpb_fm				### Fabricaciones Militares
+		text = ra_arg_ecpb_fm
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_dtms
+		}
+		x = 36
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_ecpb_psc			### Private Sector Companies
+		text = ra_arg_ecpb_psc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_roi
+		}
+		x = 39
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_ecpb_ti				### Tax Incentives
+		text = ra_arg_ecpb_ti
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_psc
+		}
+		x = 39
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_ecpb_fi				### Foreign Investments
+		text = ra_arg_ecpb_fi
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_ti
+		}
+		x = 38
+		y = 4
+
+	}
+	focus = {	
+		id = ra_arg_ecpb_ni				### National Industries
+		text = ra_arg_ecpb_ni
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_ti
+		}
+		x = 40
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_ecpb_is				### Imports Substitution
+		text = ra_arg_ecpb_is
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_roi
+		}
+		x = 43
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_ecpb_sm				### Synthethic Materials
+		text = ra_arg_ecpb_sm
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_is
+		}
+		x = 43
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_ecpb_si				### Synthetic Industry
+		text = ra_arg_ecpb_si
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_sm
+		}
+		x = 43
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_ecpb_sw				### Social Welfare
+		text = ra_arg_ecpb_sw
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb
+		}
+		x = 48
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_ecpb_ph				### Public Health
+		text = ra_arg_ecpb_ph
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_sw
+		}
+		x = 46
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_ecpb_lc				### Limited Coverage
+		text = ra_arg_ecpb_lc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_ph
+		}
+		mutually_exclusive = {
+			focus = ra_arg_ecpb_ec
+		}
+		x = 45
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_ecpb_ec				### Extensive Coverage
+		text = ra_arg_ecpb_ec
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_ph
+		}
+		mutually_exclusive = {
+			focus = ra_arg_ecpb_lc
+		}
+		x = 47
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_ecpb_hp				### Housing Proyects
+		text = ra_arg_ecpb_hp
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_sw
+		}
+		x = 50
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_ecpb_ml				### Mortgage Loans
+		text = ra_arg_ecpb_ml
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_hp
+		}
+		x = 50
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_ecpb_cr				### Constitutional Right
+		text = ra_arg_ecpb_cr
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_ecpb_ml
+		}
+		x = 50
+		y = 4
+
+	}
+
+### Economic Policies Branch - END
+
+### Public Works Branch - START
+
+	focus = {
+		id = ra_arg_pwb					### Public Works 
+		text = ra_arg_pwb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		x = 60
+		y = 0
+
+	}
+	focus = {
+		id = ra_arg_pwb_nbor			### National Board of Roads
+		text = ra_arg_pwb_nbor
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb
+		}
+		x = 54
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_pwb_tpt				### The Posse Tax
+		text = ra_arg_pwb_tpt
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_nbor
+		}
+		x = 54
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_pwb_r123			### Regions 1,2,3
+		text = ra_arg_pwb_r123
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_tpt
+		}
+		x = 53
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_pwb_r456			### Regions 4,5,6
+		text = ra_arg_pwb_r456
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_tpt
+		}
+		x = 55
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_pwb_r78				### Regions 7,8
+		text = ra_arg_pwb_r78
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_tpt
+		}
+		x = 54
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_pwb_emo				### Expand Mining Operations
+		text = ra_arg_pwb_emo
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb
+		}
+		x = 58
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_pwb_cr				### Comodoro Rivadavia
+		text = ra_arg_pwb_cr
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_emo
+		}
+		x = 57
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_pwb_sg				### Sierra Grande
+		text = ra_arg_pwb_sg
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_emo
+		}
+		x = 57
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_pwb_sc				### San Carlos
+		text = ra_arg_pwb_sc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_emo
+		}
+		x = 59
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_pwb_ca				### Cerro Aspero
+		text = ra_arg_pwb_ca
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_emo
+		}
+		x = 59
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_pwb_sj				### San Juan
+		text = ra_arg_pwb_sj
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_emo
+		}
+		x = 58
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_pwb_iz				### Industrial Zoning
+		text = ra_arg_pwb_iz
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb
+		}
+		x = 62
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_pwb_ba				### Buenos Aires	
+		text = ra_arg_pwb_ba
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_iz
+		}
+		x = 61
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_pwb_c				### Cordoba
+		text = ra_arg_pwb_c
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_iz
+		}
+		x = 61
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_pwb_r				### Rosario
+		text = ra_arg_pwb_r
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_iz
+		}
+		x = 63
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_pwb_m				### Mendoza
+		text = ra_arg_pwb_m
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_iz
+		}
+		x = 63
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_pwb_bb				### Bahia Blanca
+		text = ra_arg_pwb_bb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_iz
+		}
+		x = 62
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_pwb_mp				### Military Projects
+		text = ra_arg_pwb_mp
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb
+		}
+		x = 66
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_pwb_rsd				### Rio Santiago Dockyard
+		text = ra_arg_pwb_rsd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_mp
+		}
+		x = 65
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_pwb_vmmc			### Villa Maria Military Complex
+		text = ra_arg_pwb_vmmc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_mp
+		}
+		x = 65
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_pwb_pbnb			### Puerto Belgrano Naval Base
+		text = ra_arg_pwb_pbnb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_mp
+		}
+		x = 67
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_pwb_rtmc			### Rio Tercero Military Complex
+		text = ra_arg_pwb_rtmc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_mp
+		}
+		x = 67
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_pwb_ati				### Aerotechnical Institute
+		text = ra_arg_pwb_ati
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_mp
+		}
+		x = 65
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_pwb_pmc				### Palomar Military Collegue
+		text = ra_arg_pwb_pmc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_pwb_mp
+		}
+		x = 67
+		y = 4
+
+	}
+
+### Public Works Branch - END	
+	
+### Ministry of War - START
+
+	focus = {
+		id = ra_arg_mowb				### Ministry of War
+		text = ra_arg_mowb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		x = 76
+		y = 0
+
+	}
+	focus = {
+		id = ra_arg_mowb_radd			### Research & Development Department
+		text = ra_arg_mowb_radd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb
+		}
+		x = 70
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_mowb_os				### Officer School
+		text = ra_arg_mowb_os
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb
+		}
+		x = 76
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_mowb_mi				### Material Innovations
+		text = ra_arg_mowb_mi
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_radd
+		}
+		x = 70
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_mowb_tgw			### The Great War
+		text = ra_arg_mowb_tgw
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_os
+		}
+		x = 72
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_mowb_as				### Artillery Support
+		text = ra_arg_mowb_as
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_tgw
+		}
+		x = 71
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_mowb_mamg			### Mortars & Machineguns
+		text = ra_arg_mowb_mamg
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_tgw
+		}
+		x = 71
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_mowb_tcbw			### The Chaco Boreal War
+		text = ra_arg_mowb_tcbw
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_os
+		}
+		x = 74
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_mowb_im				### Infantry Motorization
+		text = ra_arg_mowb_im
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_tcbw
+		}
+		x = 73
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_mowb_sal			### Supplies & Logistics
+		text = ra_arg_mowb_sal
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_tcbw
+		}
+		x = 73
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_mowb_tscw			### The Spanish Civil War
+		text = ra_arg_mowb_tscw
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_os
+		}
+		x = 76
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_mowb_cas			### Close Air Support
+		text = ra_arg_mowb_cas
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_tscw
+		}
+		x = 75
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_mowb_ars			### Armor Support
+		text = ra_arg_mowb_ars
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_tscw
+		}
+		x = 75
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_mowb_tb				### The Blitzkrieg
+		text = ra_arg_mowb_tb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_os
+		}
+		x = 78
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_mowb_bfc			### Battlefield Communications
+		text = ra_arg_mowb_bfc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_tb
+		}
+		x = 77
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_mowb_am				### Army Mechanization
+		text = ra_arg_mowb_am
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_tb
+		}
+		x = 77
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_mowb_mw				### Modern Warfare
+		text = ra_arg_mowb_mw
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_os
+		}
+		x = 80
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_mowb_md				### Modern Designs
+		text = ra_arg_mowb_md
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_mw
+		}
+		x = 79
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_mowb_nge			### Next-Gen Equipment
+		text = ra_arg_mowb_nge
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_mi
+		}
+		prerequisite = {
+			focus = ra_arg_mowb_mw
+		}
+		x = 79
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_mowb_ae				### Army Ethos
+		text = ra_arg_mowb_ae
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb
+		}
+		x = 84
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_mowb_nd				### National Defense
+		text = ra_arg_mowb_nd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_ae
+		}
+		mutually_exclusive = {
+			focus = ra_arg_mowb_ip
+		}
+		x = 83
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_mowb_pa				### Political Abstention
+		text = ra_arg_mowb_pa
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_nd
+		}
+		x = 83
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_mowb_fa				### Fortress Argentina
+		text = ra_arg_mowb_fa
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_pa
+		}
+		x = 82
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_mowb_ip				### Ideological Paragons
+		text = ra_arg_mowb_ip
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_ae
+		}
+		mutually_exclusive = {
+			focus = ra_arg_mowb_nd
+		}
+		x = 85
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_mowb_pi				### Political Interference
+		text = ra_arg_mowb_pi
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_ip
+		}
+		x = 85
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_mowb_wi				### Warranted Interventions
+		text = ra_arg_mowb_wi
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_pi
+		}
+		x = 86
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_mowb_ms				### Mission Statement
+		text = ra_arg_mowb_ms
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_mowb_pi
+			focus = ra_arg_mowb_pa
+		}
+		x = 84
+		y = 4
+
+	}
+	
+### Ministry of War Branch - END
+
+### Ministry of Navy Branch - START
+
+	focus = {
+		id = ra_arg_monb					### Ministry of Navy
+		text = ra_arg_monb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		x = 91
+		y = 0
+
+	}
+	focus = {
+		id = ra_arg_monb_nms				### Naval Military School
+		text = ra_arg_monb_nms
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb
+		}
+		x = 90
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_monb_ncc				### Naval Command Corp
+		text = ra_arg_monb_ncc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb_nms
+		}
+		x = 89
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_monb_nac				### Naval Aviation Corp
+		text = ra_arg_monb_nac
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb_nms
+		}
+		x = 89
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_monb_mc					### Marine Corp
+		text = ra_arg_monb_mc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb_nms
+		}
+		x = 91
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_monb_nes				### Naval Engineering School
+		text = ra_arg_monb_nes
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb
+		}
+		x = 92
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_monb_dd					### Destroyer Designs
+		text = ra_arg_monb_dd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb_nes
+		}
+		x = 91
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_monb_sd					### Submarine Designs
+		text = ra_arg_monb_sd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb_nes
+		}
+		x = 93
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_monb_cd					### Cruiser Designs
+		text = ra_arg_monb_cd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb_nes
+		}
+		x = 93
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_monb_bd					### Battleship Designs
+		text = ra_arg_monb_bd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb_nes
+		}
+		x = 92
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_monb_pp					### Power Projection
+		text = ra_arg_monb_pp
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_monb_nms
+		}
+		prerequisite = {
+			focus = ra_arg_monb_nes
+		}
+		prerequisite = {
+			focus = ra_arg_monb_nac
+		}
+		x = 90
+		y = 4
+
+	}
+
+### Ministry of Navy Branch - END
+
+### Foreign Affairs Branch - START
+
+	focus = {
+		id = ra_arg_fapb					### Foreign Affairs
+		text = ra_arg_fapb
+		icon = GFX_goal_unknown
+		cost = 0.00
+		x = 100
+		y = 0
+
+	}
+	focus = {
+		id = ra_arg_fapb_tc					### Territorial Claims
+		text = ra_arg_fapb_tc
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb
+		}
+		x = 97
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_fapb_tha				### The Hayes Arbitration
+		text = ra_arg_fapb_tha
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_tc
+		}
+		x = 96
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_fapb_rdlpe				### Rio de la Plata Estuary
+		text = ra_arg_fapb_rdlpe
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_tc
+		}
+		x = 96
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_fapb_tca				### The Cleveland Arbitration
+		text = ra_arg_fapb_tca
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_tc
+		}
+		x = 98
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_fapb_ttm				### The Tarija Matter
+		text = ra_arg_fapb_ttm
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_tc
+		}
+		x = 98
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_fapb_ce					### Chilean Encroachment
+		text = ra_arg_fapb_ce
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_tc
+		}
+		x = 96
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_fapb_m					### Malvinas
+		text = ra_arg_fapb_m
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_tc
+		}
+		x = 98
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_fapb_eld				### Embrace Lamas Doctrine
+		text = ra_arg_fapb_eld
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb
+		}
+		mutually_exclusive = {
+			focus = ra_arg_fapb_rld
+		}
+		x = 100
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_fapb_n					### Neutrality
+		text = ra_arg_fapb_n
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_eld
+		}
+		x = 100
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_fapb_i					### Isolation
+		text = ra_arg_fapb_i
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_n
+		}
+		x = 100
+		y = 4
+
+	}
+	focus = {
+		id = ra_arg_fapb_rld				### Reject Lamas Doctrine
+		text = ra_arg_fapb_rld
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb
+		}
+		mutually_exclusive = {
+			focus = ra_arg_fapb_eld
+		}
+		x = 103
+		y = 1
+
+	}
+	focus = {
+		id = ra_arg_fapb_rpa				### Reject Pax Americana
+		text = ra_arg_fapb_rpa
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_eld
+			focus = ra_arg_fapb_rld
+		}
+		x = 101
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_fapb_dsoi				### Define Sphere of Interest
+		text = ra_arg_fapb_dsoi
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_rld
+		}
+		x = 103
+		y = 2
+
+	}
+	focus = {
+		id = ra_arg_fapb_pg					### Patria Grande
+		text = ra_arg_fapb_pg
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_dsoi
+		}
+		x = 102
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_fapb_in					### Interventionism
+		text = ra_arg_fapb_in
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_dsoi
+		}
+		x = 104
+		y = 3
+
+	}
+	focus = {
+		id = ra_arg_fapb_ri					### Regional Integration
+		text = ra_arg_fapb_ri
+		icon = GFX_goal_unknown
+		cost = 0.00
+		prerequisite = {
+			focus = ra_arg_fapb_pg
+			focus = ra_arg_fapb_in
+		}
+		x = 103
+		y = 4
+
+	}
+}

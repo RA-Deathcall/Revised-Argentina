@@ -1,0 +1,43 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_trait_go_doer"
+		texturefile = "gfx/interface/trait_thorough_planner.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_army_engineer"
+		texturefile = "gfx/interface/trait_engineer.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_standard_bearer"
+		texturefile = "gfx/interface/trait_inspirational_leader.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_order_of_merit"
+		texturefile = "gfx/interface/trait_old_guard.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_master_planner"
+		texturefile = "gfx/interface/trait_fast_planner.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_kriegsakademy_student"
+		texturefile = "gfx/interface/trait_commando.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_cavalry_specialist"
+		texturefile = "gfx/interface/trait_offensive_doctrine.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_veteran_of_the_great_chaco_campaign"
+		texturefile = "gfx/interface/trait_hill_fighter.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_national_fencing_champion"
+		texturefile = "gfx/interface/trait_offensive_doctrine.dds"
+	}
+		spriteType = {
+		name = "GFX_trait_military_historian"
+		texturefile = "gfx/interface/trait_trickster.dds"
+	}
+}

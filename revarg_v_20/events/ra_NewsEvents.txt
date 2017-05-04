@@ -1,0 +1,49 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+
+###########################
+# Argentina News Events
+###########################
+
+# Carlos Saavedra Lamas wins Nobel Peace Price
+news_event = {
+	id = ra_news.1
+	title = ra_arg_news.1.t
+	desc = ra_arg_news.1.d
+	picture = GFX_news_event_arg_lamas_nobel_price
+	
+	major = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		TAG = ARG
+		date = 1936.11.24
+	}
+
+	mean_time_to_happen = {days = 1}
+	
+	option = {
+		name = ra_arg_news.1.a
+		
+		add_political_power = 70
+		add_national_unity = 0.01
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		
+		trigger = {
+			TAG = ARG
+		}
+	}
+	option = {
+		name = ra_arg_news.1.b
+			
+		trigger = {
+			NOT = {
+				TAG = ARG
+			}
+		}
+	}
+}

@@ -1,0 +1,557 @@
+ideas = {
+	country = {
+
+### REV ARG MOD EDITS ###
+	
+		ARG_political_turmoil = {
+					
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.5
+				unity_factor = -0.15
+				conscription_factor = -0.30
+			}
+		}
+		ARG_saavedra_lamas_treaty = {
+			
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.25
+				opinion_gain_monthly_factor = 0.25
+				justify_war_goal_time = +1
+				
+			}
+		}
+		ARG_roca_runciman_treaty = {
+			
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = -0.25
+				local_resources_factor = -0.25			
+				}
+			}
+		ARG_Patriotic_Fraud = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				neutrality_drift = 0.3
+				fascism_drift = 0.1
+				}		
+		
+		}
+		ARG_Civil_Unrest = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				unity_weekly = -0.001
+				}		
+		
+		}
+		ARG_Transparency = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = -0.25
+				neutrality_drift = 0.2
+				fascism_drift = 0.15
+				democratic_drift = 0.3
+				communism_drift = 0.1
+				}		
+		
+		}
+		ARG_Appeased_Population = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				unity_weekly = 0.001
+				}		
+		
+		}
+		ARG_Centralized_Government = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.20
+				unity_factor = -0.03
+				neutrality_drift = 0.05
+				fascism_drift = 0.15
+				}		
+		
+		}
+		ARG_Coalition_Government = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.10
+				unity_factor = 0.05
+				neutrality_drift = 0.05
+				fascism_drift = 0.1
+				democratic_drift = 0.05
+				communism_drift = 0.15
+				}		
+		}
+		ARG_Brief_Respite = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}		
+		}
+		ARG_Corporate_Law_Reforms = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+				production_speed_industrial_complex_factor = 0.05
+			}		
+		}
+		ARG_Labor_Law_Reforms = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}		
+		}
+		ARG_Blooming_Industry = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+			}		
+		}
+		ARG_ICA_Support = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				unity_weekly = 0.001
+				production_speed_industrial_complex_factor = 0.05
+			}		
+		}
+		ARG_Corporate_Supremacy = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				industrial_capacity_factory = -0.05		
+				trade_opinion_factor = 0.25
+			}		
+		}
+		ARG_Worker_Rights = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15	
+				production_speed_industrial_complex_factor = -0.05
+				communism_drift = 0.1			
+			}		
+		}
+		ARG_Open_Borders = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.015
+				unity_factor = -0.03
+				conscription = 0.01
+				MONTHLY_POPULATION = 0.2
+			}		
+		}
+		ARG_Safe_Heaven_Initiative = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				unity_factor = -0.1
+				conscription = 0.02
+				MONTHLY_POPULATION = 0.4
+				research_time_factor = -0.025
+			}		
+		}
+		ARG_Closed_Borders_Philosphy = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.025
+				unity_factor = 0.1
+				drift_defence_factor = 0.10
+				MONTHLY_POPULATION = -0.05
+			}		
+		}
+		ARG_Directive_11 = {
+		
+			allowed = {
+				original_tag = ARG
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				unity_factor = 0.025
+				drift_defence_factor = 0.5
+				opinion_gain_monthly_factor = -0.2
+				fascism_drift = 0.15
+				fascism_acceptance = 85
+				trade_opinion_factor = -0.15
+				MONTHLY_POPULATION = -0.1
+			}		
+		}
+	}
+
+
+	political_advisor = {
+
+		ARG_carlos_saavedra_lamas = {
+
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { brilliant_negotiator	}
+		}
+		
+### REV ARG MOD EDITS ###
+
+		ARG_ramon_castillo = {
+
+			picture = generic_political_advisor_south_america_2
+
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { quartermaster_general }
+		}
+
+		ARG_luis_podesta_costa = {
+
+			picture = generic_political_advisor_south_america_1
+				
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { backroom_backstabber }
+		}
+
+		ARG_manuel_maria_de_iriondo = {
+
+			picture = generic_political_advisor_south_america_3
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { prince_of_terror }
+		}
+	}
+
+	# MILITARY
+	
+	army_chief = {
+
+		ARG_manuel_a_rodriguez = {
+
+			picture = generic_army_south_america_3
+			
+			allowed = {
+				original_tag = ARG
+			}		
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_pedro_pablo_ramirez = {
+
+			picture = generic_army_south_america_2
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		ARG_antonio_parodi = {
+
+			picture = generic_air_south_america_3
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_jose_tamborni = {
+
+			picture = generic_air_south_america_2
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		ARG_pedro_s_casal = {
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = ARG
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_heriberto_la_galine = {
+
+			picture = generic_navy_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		ARG_francisco_m_velez = {
+			
+			picture = generic_army_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ARG_thomas_martinez = {
+
+			picture = generic_army_south_america_4
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_uribaldi_diaz_brittenberg = {
+
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ARG_eleazar_videla = {
+
+			picture = generic_navy_south_america_2
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			traits = { navy_capital_ship_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	theorist = {
+		ARG_agustin_pedro_justo = {
+			
+			picture = generic_army_south_america_5
+
+			allowed = {
+				original_tag = ARG
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		ARG_edelmiro_farrell = {
+
+			picture = generic_navy_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}	
+
+		ARG_hortensio_quijano = {
+
+			picture = generic_air_south_america_1
+			
+			allowed = {
+				original_tag = ARG
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+	}
+}

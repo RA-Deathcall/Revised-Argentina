@@ -1,0 +1,31 @@
+﻿l_english:
+ ##########################################
+ ######     REVISED ARGENTINA MOD    ######
+ ######            TRAITS            ######
+ ##########################################
+ civil_engineer:0 "Civil Engineer"
+ civil_engineer_desc:0 "The road to success is always under construction."
+ misguided_patriot:0 "Misguided Patriot"
+ misguided_patriot_desc:0 "This man is a firm proponent of the 'Patriotic Fraud' doctrine and has no qualms 'revising' electoral results."
+ brilliant_negotiator:0 "Brilliant Negotiator"
+ brilliant_negotiator_desc:0 "The pen is mightier than the sword, and this man has plenty of ink."
+ go_doer:0 "Go Doer"
+ go_doer_desc:0 "General Pistarini earned his nickname after many years of being the go to person if you want something done quickly and efficiently."
+ standard_bearer:0 "Standard Bearer"
+ standard_bearer_desc:0 "General Von der Becke graduated top of his class in military school in 1908, already showing great promise as a capable and resourceful man."
+ order_of_merit:0 "Order of Merit"
+ order_of_merit_desc:0 "Von der Becke graduated best of his class after he finished his studies at the War College."
+ master_planner:0 "Master Planner"
+ master_planner_desc:0 "This man has shown great ability at theorizing all kinds of scenarios."
+ kriegsakademy_student:0 "Kriegsakademy Student"
+ kriegsakademy_student_desc:0 "Von der Becke attended the Kriegsakademy during his time on Germany as military attache to the Argentinian embassy."
+ army_engineer:0 "Army Engineer"
+ army_engineer_desc:0 "This man knows how to take advantage of his professional knowledge of engineering."
+ cavalry_specialist:0 "Cavalry Specialist"
+ cavalry_specialist_desc:0 "This man has conduced extensive training with cavalry formations and knows how to get the best out of them."
+ veteran_of_the_great_chaco_campaign:0 "Veteran of the Great Chaco Campaign"
+ veteran_of_the_great_chaco_campaign_desc:0 "The Great Chaco Campaign of the '20s was a nasty affair, far from support and in difficult terrain. This man lived through it and came back with valuable lessons learned."
+ national_fencing_champion:0 "National Fencing Champion"
+ national_fencing_champion_desc: "Peron became the National Fencing Champion 1918, he's also a proficient boxer and athelete, something his men respect him for."
+ military_historian:0 "Military Historian"
+ military_historian_desc:0 "This man has spent a lot of his time studying past conflicts, writting books about them and incorporating their lessons to his own repertoir of skills."

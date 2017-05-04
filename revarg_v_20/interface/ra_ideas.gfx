@@ -1,0 +1,31 @@
+spriteTypes = {	
+#########################
+# REVISED ARGENTINA MOD #
+#########################
+	
+### NATIONAL SPIRITS ###
+
+	spriteType = {
+		name = "GFX_idea_ARG_political_turmoil"
+		texturefile = "gfx/interface/ideas/ra_national_spirits/ARG_ideas_national_spirit_political_turmoil_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ARG_saavedra_lamas_treaty"
+		texturefile = "gfx/interface/ideas/ra_national_spirits/ARG_ideas_national_spirit_saavedra_lamas_treaty_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ARG_roca_runciman_treaty"
+		texturefile = "gfx/interface/ideas/ra_national_spirits/ARG_ideas_national_spirit_runciman_treaty_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ARG_Patriotic_Fraud"
+		texturefile = "gfx/interface/ideas/ra_national_spirits/ARG_ideas_national_spirit_patriotic_fraud_icon.dds"
+	}	
+	
+### POLITICAL ADVISORS ###	
+	
+	spriteType = {
+		name = "GFX_idea_ARG_carlos_saavedra_lamas"
+		texturefile = "gfx/interface/ideas/ra_political_advisors/ARG_advisor_portrait_saavedra_lamas.dds"
+	}
+}

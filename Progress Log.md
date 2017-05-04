@@ -1,4 +1,5 @@
 Managed to get Argentina to show as a minor nation on the “Gathering Storm” scenario.
+
 Changed General Justo’s portrait for the real thing.
 Added new National Spirit for Argentina, “Political Turmoil”, supposed to portray the effects of the Infamous Decade, gives several penalties, can be removed through National Focus Tree.
 Finished flavor text for “Political Turmoil”

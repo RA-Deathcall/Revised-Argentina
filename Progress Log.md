@@ -97,3 +97,20 @@ Version 0.20 >>>
 Created github project for collaborators.
 
 Fixed the Saavedra Lamas Wins the Nobel Price Event issue.
+
+Added Manuel Savio to the list of political advisors and his custom portrait.
+
+Added a unique trait for Savio.
+
+Added Miguel Carcano to the list of political advisors and his custom portrait.
+
+Added a unique trait for Carcano.
+
+Revised Manuel Rodriguez (Army Chief). Made new portrait and trait for him.
+
+Revised Pedro Pablo Ramirez (Army Chief). Made new portrait and trait for him (historical accuracy lax on this one, had to do some guessing as there isn’t much info about his military career per se)
+
+Revised Pedro S. Casal (Navy Chief). Made new portrait and trait for him (portrait is NOT historically accurate and I’m not even sure it’s actually him to begin with. Could not find an image of the man for the life of me, only one in which he is mentioned but he’s also posing with 14 other people and there’s no way to tell who’s who. The picture I used is my best guess judging by his age at the time and what little I could identify from the ranks. Note that Casal would be almost on his sixties by the time the game starts and the picture is from when he was 31. Sadly, this will have to do until I find a proper picture).
+
+Note: General Rodriguez died on the first months of 1936 and Admiral Casal retired in 1937. Must consider making events to address this in game.
+
